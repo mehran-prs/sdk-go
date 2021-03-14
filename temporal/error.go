@@ -61,7 +61,7 @@ Workflow code could handle errors based on different types of error. Below is sa
 err := workflow.ExecuteActivity(ctx, MyActivity, ...).Get(ctx, nil)
 if err != nil {
 	var applicationErr *ApplicationError
-	if errors.As(err, &applicationError) {
+	if errors.As(err, &applicationErr) {
 		// retrieve error message
 		fmt.Println(applicationError.Error())
 
